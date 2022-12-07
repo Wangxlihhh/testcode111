@@ -1,7 +1,6 @@
 <!-- 准备好一个“容器” -->
 <div id="test1"></div>
 <div id="test2"></div>
-<div id="test3"></div>
 <!-- 引入react核心库 -->
 <script type="text/javascript" src="../js/react.development.js"></script>
 <!-- 引入react-dom，用于支持react操作DOM -->
@@ -27,7 +26,6 @@
 			age:18	//age默认为18
 			}
     render(){
-      // console.log(this);
       const {name,age,sex} = this.props
       return (
         <ul>
@@ -42,11 +40,9 @@
   //渲染组件到页面
   ReactDOM.render(<Person name="jerry" age={19} sex="男" speak={speak}/>,document.getElementById('test1'))
   ReactDOM.render(<Person name="tom" age={18} sex="女"/>,document.getElementById('test2'))
-  const p = {name:'老刘', age:18, sex:'女'}
-  ReactDOM.render(<Person {...p}/>,document.getElementById('test3'))
 
-	//如果还想在标签里面添加函数属性 
+  //如果还想在标签里面添加函数属性 
   function speak(){
-  	console.log('我想说话呀！');
+		console.log('我想说话呀！');
   }
 </script>
